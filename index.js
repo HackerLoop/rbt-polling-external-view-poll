@@ -147,16 +147,12 @@ const results = (poll, answers, result = []) => {
       wrapper.empty();
 
       Object.keys(answers).forEach((i) => {
-        const divItem = $('<div>', { class: 'jquery-poll-answer poll-answer ' + (result.vote == i ? 'selected' : '') });
+        const divItem = $('<div>', { class: 'jquery-poll-answer poll-answer ' + (true ? 'selected' : '') });
         divItem.attr('data-answerid', i);
         const divImg = $('<div>', { class: 'poll-answer-image' });
         divImg.css('background-image', `url('${poll.answers[i].img}')`);
         const divAnswer = $('<div>', { class: 'poll-answer-label' });
         divAnswer.html(poll.answers[i].text);
-        if(result.vote == i) {
-          const imgCheck = $('<img>', { class: 'check', src: 'images/check.png' });
-          divImg.append(imgCheck);
-        }
         divItem.append(divImg);
         divItem.append(divAnswer);
 
@@ -184,7 +180,7 @@ const results = (poll, answers, result = []) => {
       $('#poll-answers #bloc_answers').empty();
       const wrapper = $('<div>', { id: 'bloc_answers' });
       Object.keys(answers).forEach((i) => {
-        const divItem = $('<div>', { class: 'jquery-poll-answer poll-answer-list-item result ' + (result.vote == i ? 'selected' : '') });
+        const divItem = $('<div>', { class: 'jquery-poll-answer poll-answer-list-item result ' + (true ? 'selected' : '') });
         divItem.attr('data-answerid', i);
 
         const divAnswer = $('<div>', { class: 'poll-answer-list-item-name' });
@@ -200,7 +196,7 @@ const results = (poll, answers, result = []) => {
         }
         console.log(percentage);
 
-        const divAnswerValue = $('<div>', { class: 'poll-answer-list-item-value ' + (result.vote == i ? 'selected' : '') });
+        const divAnswerValue = $('<div>', { class: 'poll-answer-list-item-value ' + (true ? 'selected' : '') });
         divAnswerValue.css({ width: `${percentage}%` });
         divItem.append(divAnswerValue);
 

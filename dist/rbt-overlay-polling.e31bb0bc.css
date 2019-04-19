@@ -1,0 +1,1687 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700");
+.hidden {
+  display: none;
+}
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.main {
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  margin-right: auto;
+  margin-top: auto;
+  margin-left: 24px;
+  margin-top: 24px;
+  max-width: 276px;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+.trigger {
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+  flex: 0 0 36px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#db0a40, #001123);
+  background-color: #db0a40;
+  margin-bottom: 12px;
+  border: 2px solid white;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-right: 6px;
+  transition: 0.15s ease-in-out transform;
+}
+.trigger:hover {
+  transform: scale(1.1);
+}
+.trigger svg {
+  position: relative;
+  z-index: 34;
+}
+.trigger svg path {
+  stroke: #ffe8ee;
+}
+.trigger:before {
+  position: absolute;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: #321b3d;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+.trigger.clicked:before {
+  opacity: 1;
+}
+.trigger:after {
+  position: absolute;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  border: 1px solid rgba(0, 17, 35, 0.5);
+}
+.trigger .can {
+  height: 27px;
+  width: 10px;
+  transform: rotate(36deg);
+}
+.trigger .can-shadow {
+  filter: blur(4px);
+  transform: rotate(36deg) scale(1.1);
+}
+
+.box {
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(0deg, #001e3c, #db0a40);
+  user-select: none;
+  position: relative;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+  transform: translateY(-20px);
+  min-width: 230px;
+}
+.box.opened {
+  opacity: 1;
+  transform: translateY(0);
+}
+.box.poll {
+  min-width: 300px;
+  width: content-width;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box.main {
+  min-height: 345px;
+  width: 100%;
+  max-width: 230px;
+}
+.box-inner {
+  background: rgba(0, 30, 60, 0.77);
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.box-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.box:after, .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #db0a40;
+}
+.box:before {
+  top: initial;
+  bottom: 0;
+  background: white;
+}
+
+.can {
+  height: 15px;
+  width: 5.56px;
+  background-image: url(https://uploads.codesandbox.io/uploads/user/2fca2322-f9cb-49e7-b3e3-ca1e6898abe8/Ftqg-canette.png);
+  background-size: cover;
+  transform: rotate(15deg);
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+.can-container {
+  position: relative;
+}
+.can-shadow {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  right: 0;
+  background-size: cover;
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.extension {
+  font-family: "Titillium Web", sans-serif;
+  padding-top: 50px;
+}
+.extension * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.waitforpoll {
+  display: flex;
+  padding-top: 60px;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffe8ee;
+}
+
+.home {
+  position: relative;
+  margin-top: -1px;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.home-header-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  animation: fadeInOnly 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.home-header-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #231C3C;
+  z-index: 99;
+  opacity: 0.6;
+}
+.home-header-container:after {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(35, 28, 60, 0.4), #231C3C);
+}
+.home-header-container .home-header {
+  filter: grayscale(100%);
+  height: 70px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.home-content {
+  position: relative;
+  color: white;
+  z-index: 999;
+  padding: 0 12px;
+  flex: 1;
+}
+.home-content .main-title {
+  min-height: 20px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  margin-top: 12px;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+.home-content .subtitle {
+  min-height: 38px;
+  color: #d2e8ff;
+  text-align: left;
+  font-size: 14px;
+  padding: 6px 0;
+  padding-left: 10px;
+  background: rgba(210, 232, 255, 0.1);
+  color: #d2e8ff;
+  border-radius: 4px;
+  margin: 8px 0;
+  line-height: 1.4;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #d2e8ff;
+  border-left: none;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+.home-content .subtitle:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #d2e8ff;
+}
+.home-content .subtitle .can-container {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin: 0 6px;
+}
+.home-content .text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #d2e8ff;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.home-cta {
+  line-height: 39px;
+  flex: 0 0 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  background: #db0a40;
+  margin-bottom: 3px;
+  color: #ffe8ee;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+}
+.home-cta:hover {
+  background: #c7093a;
+  color: white;
+}
+
+.leaderboard {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  padding: 0 12px;
+}
+.leaderboard-title {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  margin-top: 12px;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 0;
+}
+.leaderboard .list {
+  width: 100%;
+  flex: 1;
+}
+
+.list {
+  display: flex;
+  flex-flow: column;
+}
+
+.list-item {
+  display: none;
+  border-bottom: 1px solid rgba(210, 232, 255, 0.15);
+  flex: 1;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+}
+.list-item.active {
+  display: flex;
+}
+.list-item:last-child {
+  border-bottom: none;
+}
+.list-item-position {
+  color: #d2e8ff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.list-item-avatar {
+  height: 24px;
+  width: 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin: 0 8px;
+  background-size: cover;
+}
+.list-item-score {
+  font-size: 12px;
+  color: #d2e8ff;
+  display: flex;
+  align-items: center;
+}
+.list-item-score .can {
+  margin-right: 6px;
+}
+.list-item-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pagination {
+  display: flex;
+  height: 40px;
+  border-top: 1px solid rgba(210, 232, 255, 0.15);
+  margin: -12px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.pagination.no-margin {
+  margin: 0;
+}
+.pagination .arrow {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.15s all;
+  cursor: pointer;
+}
+.pagination .arrow:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+.pagination .arrow svg {
+  position: relative;
+}
+.pagination .arrow svg polyline {
+  stroke: #d2e8ff;
+}
+.pagination .arrow-right {
+  text-align: right;
+  border-left: 1px solid rgba(210, 232, 255, 0.15);
+}
+.pagination .arrow-right svg {
+  transform: rotate(180deg);
+}
+
+.current-position {
+  flex: 0 0 40px;
+  background: rgba(210, 232, 255, 0.2);
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 0 12px;
+  height: 40px;
+  margin-bottom: 3px;
+  animation: none !important;
+  opacity: 1;
+}
+.current-position .list-item-name {
+  text-align: center;
+}
+.current-position > * {
+  position: relative;
+  bottom: 0;
+}
+
+.list-item {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+.list-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.list-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.list-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.list-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInOnly {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.poll-detail {
+  flex: 0 0 100%;
+  position: relative;
+  z-index: 99;
+  margin-top: -38px;
+}
+.poll-detail.active {
+  box-shadow: 0px 0px 3px black;
+}
+.poll-detail-header {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  height: 37px;
+  line-height: 38px;
+  font-size: 14px;
+}
+.poll-detail-header .back {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  width: 32px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.poll-detail-header .back:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.poll-detail-question {
+  text-align: center;
+  color: white;
+  padding: 18px 12px;
+  font-weight: 900;
+  font-size: 16px;
+}
+.poll-detail-tagline {
+  font-size: 12px;
+  color: #ffe8ee;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.poll-detail-tagline span {
+  display: inline-block;
+  margin: 0 4px;
+  opacity: 0.5;
+}
+
+.poll-detail {
+  display: flex;
+  flex-flow: column;
+}
+.poll-detail-results {
+  flex: 1;
+  padding: 0 12px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-flow: column;
+}
+
+.result-item {
+  display: flex;
+  position: relative;
+  padding: 2px 0;
+  flex: 0 0 29px;
+}
+.result-item .result-item-content .progress-bar {
+  position: absolute;
+  background: #ffe8ee;
+  height: 100%;
+  opacity: 0.2;
+  border-radius: 2px;
+}
+.result-item .result-item-content .progress-bar.winner {
+  background: #db0a40;
+  opacity: 1;
+}
+.result-item .progress-bar {
+  position: absolute;
+  background: #ffe8ee;
+  height: 100%;
+  opacity: 0.2;
+  border-radius: 2px;
+}
+.result-item .progress-bar.winner {
+  background: #db0a40;
+  opacity: 1;
+}
+.result-item-avatar {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  background-size: cover !important;
+  opacity: 0.5;
+  height: 25px;
+  width: 25px;
+}
+.result-item-avatar-container {
+  margin-right: 4px;
+  flex: 0 0 25px;
+  position: relative;
+}
+.result-item-avatar-container img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.result-item-avatar-container .check {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+}
+.result-item-avatar.winner {
+  opacity: 1;
+}
+.result-item-content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.result-item-content img {
+  margin-left: 4px;
+}
+.result-item-content.winner .result-item-title {
+  color: white;
+}
+.result-item-title {
+  font-weight: 900;
+  position: relative;
+  z-index: 9;
+  color: #ffe8ee;
+  bottom: 1px;
+  padding-left: 4px;
+  font-size: 14px;
+}
+.result-item-percent {
+  position: relative;
+  z-index: 9;
+  font-weight: 900;
+  font-size: 12px;
+  color: white;
+  margin-left: auto;
+}
+
+.poll-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.poll.opened {
+  pointer-events: auto;
+}
+
+.poll-title {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 12px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1.2;
+  justify-content: center;
+}
+
+.poll-header {
+  padding: 12px;
+  padding-bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #db0a40;
+  display: flex;
+  justify-content: center;
+}
+.poll-header-title {
+  font-weight: 700;
+  flex: 1;
+}
+
+.poll-body {
+  min-height: 170px;
+}
+.poll-body.boximg {
+  min-height: 235px;
+}
+
+.poll-counter-container {
+  text-align: center;
+  position: relative;
+}
+
+.poll-counter-value {
+  position: absolute;
+  left: 1px;
+  right: 0;
+  top: 0;
+  bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d2e8ff;
+  font-weight: 800;
+}
+
+.progress {
+  transform: rotate(-90deg);
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.progress__value {
+  animation: progress 60s linear infinite;
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  stroke: rgba(210, 232, 255, 0.3);
+}
+
+.poll-cross {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0.5;
+}
+.poll-cross svg {
+  position: relative;
+  top: 2px;
+}
+.poll-cross svg path {
+  stroke: #ffe8ee !important;
+}
+
+.poll-answers {
+  display: flex;
+  padding: 0 12px;
+  flex: 1;
+  padding-bottom: 18px;
+  justify-content: center;
+}
+.poll-answers.list {
+  display: block;
+}
+.poll-answers .poll-answer {
+  text-align: center;
+  margin: 0 3px;
+  display: flex;
+  flex-flow: column;
+  cursor: pointer;
+  width: 70px;
+  max-width: 100px;
+}
+.poll-answers .poll-answer.selected .poll-answer-label {
+  background: white;
+  color: #db0a40 !important;
+  text-shadow: none;
+  font-weight: 900;
+}
+.poll-answers .poll-answer:hover .poll-answer-image:before {
+  opacity: 0;
+}
+.poll-answers .poll-answer:hover .poll-answer-label {
+  color: white;
+}
+.poll-answers .poll-answer-image {
+  height: 70px;
+  background-size: cover;
+  border-radius: 4px 4px 0 0;
+  background-position: center center;
+  position: relative;
+  cursor: pointer;
+}
+.poll-answers .poll-answer-image .check {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 4px;
+  width: 16px;
+  height: 16px;
+}
+.poll-answers .poll-answer-image:before {
+  content: "";
+  opacity: 0;
+  background: rgba(0, 17, 35, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s ease-in-out;
+  border-radius: 4px 4px 0 0;
+}
+.poll-answers .poll-answer-image:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 1px solid rgba(210, 232, 255, 0.1);
+  border-top: 1px solid rgba(210, 232, 255, 0.1);
+  border-right: 1px solid rgba(210, 232, 255, 0.1);
+  border-radius: 4px 4px 0 0;
+}
+.poll-answers .poll-answer-label {
+  line-height: 1;
+  min-height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d2e8ff;
+  font-size: 14px;
+  font-weight: 600;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(210, 232, 255, 0.2);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  right: 0;
+}
+.poll-answers .poll-answer-button {
+  color: white;
+  font-size: 13px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  background: #db0a40;
+  font-weight: 900;
+  padding: 6px 0;
+  border-radius: 0 0 4px 4px;
+}
+.poll-answers .poll-answer-button:hover {
+  background: #c30939;
+}
+
+.poll-answers:hover .poll-answer-image:before {
+  content: "";
+  opacity: 1;
+}
+
+.poll-answer-percent {
+  height: 32px;
+  background: rgba(219, 10, 64, 0.3);
+  border-radius: 0 0 4px 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+}
+.poll-answer-percent span {
+  position: relative;
+  font-weight: 900;
+  font-size: 14px;
+}
+.poll-answer-percent-value {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #db0a40;
+}
+
+.poll-answer-list-item {
+  box-shadow: 0px 0px 0px 1px #db0a40 inset;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  color: #db0a40;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  font-size: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.poll-answer-list-item .check {
+  position: relative;
+  z-index: 9;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+}
+.poll-answer-list-item.result {
+  color: white;
+  text-align: left;
+  padding-left: 6px;
+  justify-content: flex-start;
+  border-color: transparent;
+  box-shadow: none;
+}
+.poll-answer-list-item.result:hover {
+  background: none;
+}
+.poll-answer-list-item.result:hover .poll-answer-list-item-value:not(.selected) {
+  background: rgba(255, 232, 238, 0.3);
+}
+.poll-answer-list-item:hover {
+  background: rgba(219, 10, 64, 0.15);
+}
+.poll-answer-list-item-name {
+  position: relative;
+  z-index: 99;
+}
+.poll-answer-list-item-value {
+  height: 100%;
+  background: rgba(255, 232, 238, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: background 0.3s ease-in-out;
+}
+.poll-answer-list-item-value.selected {
+  background: #db0a40;
+}
+.poll-answer-list-item-percent {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 6px;
+  color: #ffe8ee;
+}
+
+@keyframes progress {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -339.292;
+  }
+}
+.popupVotePositionRight .box.poll {
+  width: 35vw;
+  max-width: 35vw;
+  height: 50vh;
+  min-width: unset;
+  left: auto;
+  right: 2.5%;
+  transform: translate(0, -50%);
+}
+.popupVotePositionRight .box.poll .duration {
+  left: 0.1vw;
+  right: 0;
+  top: 0;
+  bottom: 0.1vw;
+}
+.popupVotePositionRight .box.poll .progress {
+  width: 3vw;
+  height: 3vw;
+}
+.popupVotePositionRight .box.poll .poll-cross svg {
+  top: 0.2vw;
+  width: 1.4vw;
+  height: 1.4vw;
+}
+.popupVotePositionRight .box.poll .poll-header {
+  font-size: 1.4vw;
+  padding: 1.2vw;
+  padding-bottom: 0;
+}
+.popupVotePositionRight .box.poll .poll-title {
+  font-size: 1.98vw;
+  padding: 0 1.2vw;
+  height: 8vw;
+}
+.popupVotePositionRight .box.poll .poll-answers {
+  justify-content: center;
+  padding: 0 1.2vw;
+}
+.popupVotePositionRight .box.poll .poll-answer-list-item {
+  margin-bottom: 0.6vw;
+  border-radius: 0.4vw;
+  line-height: 3vw;
+  font-size: 1.4vw;
+}
+.popupVotePositionRight .box.poll .poll-answer {
+  width: 7vw;
+  max-width: unset;
+  margin: 0 0.3vw;
+}
+.popupVotePositionRight .box.poll .poll-answer .label {
+  font-size: 1.4vw;
+}
+.popupVotePositionRight .box.poll .poll-answer .poll-answer-label {
+  min-height: 3.2vw;
+  padding-bottom: 0.1vw;
+  font-size: 1.4vw;
+}
+.popupVotePositionRight .box.poll .poll-answer .poll-answer-button {
+  font-size: 1.3vw;
+  padding: 0.6vw 0;
+  border-radius: 0 0 0.4vw 0.4vw;
+}
+.popupVotePositionRight .box.poll .poll-answer .poll-answer-image {
+  height: 7vw;
+  border-radius: 0.4vw 0.4vw 0 0;
+}
+.popupVotePositionRight .box.poll .poll-answer .poll-answer-image .check {
+  margin: 0.4vw;
+  width: 1.6vw;
+  height: 1.6vw;
+}
+.popupVotePositionRight .box.poll .poll-answer .poll-answer-percent {
+  height: 3.2vw;
+  font-size: 1.4vw;
+  border-radius: 0 0 0.4vw 0.4vw;
+}
+.popupVotePositionRight .box.poll .poll-answer .poll-answer-percent span {
+  font-size: 1.4vw;
+}
+
+.slider {
+  flex: 1;
+  display: flex;
+  transition: all 0.4s ease;
+}
+.slider.detail {
+  transform: translateX(-100%);
+}
+
+.profile-header {
+  color: white;
+  position: relative;
+  flex: 0 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1px;
+}
+.profile-header:after {
+  opacity: 0;
+  content: "";
+  background: #db0a40;
+  position: absolute;
+  animation: header 0.3s ease-in-out forwards;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.profile-header .profile-header-content {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 0.15s;
+  position: relative;
+  z-index: 3;
+}
+.profile-header canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.profile-name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.profile-tagline {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffe8ee;
+}
+.profile-tagline > * {
+  margin: 0 4px;
+}
+
+.profile-can-count {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+.profile-can-count .can-container {
+  position: relative;
+  top: 3px;
+  margin-right: 6px;
+}
+
+.profile-rank {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 0.25s;
+}
+.profile-rank span {
+  opacity: 0.5;
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+.poll-index {
+  padding: 0 12px;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.profile {
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.poll-item {
+  display: none;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(210, 232, 255, 0.15);
+  animation: fadeIn 0.3s ease-in-out forwards;
+  opacity: 0;
+  cursor: pointer;
+  flex: 0 0 53px;
+}
+.poll-item-arrow {
+  flex: 0 0 10px;
+  position: absolute;
+  right: 0;
+}
+.poll-item-arrow img {
+  display: block;
+}
+.poll-item.active {
+  display: flex;
+}
+.poll-item-inner {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  border-radius: 4px;
+  width: 100%;
+}
+.poll-item-inner:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+.poll-item.active:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.poll-item.active:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.poll-item.active:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.poll-item.active:last-child {
+  border-bottom: none;
+}
+.poll-item.won .poll-item-answer {
+  color: #db0a40;
+}
+.poll-item.no_answer .poll-item-answer {
+  color: rgba(210, 232, 255, 0.5) !important;
+}
+.poll-item-icon {
+  margin-right: 12px;
+}
+.poll-item-content {
+  flex: 1;
+}
+.poll-item-title {
+  max-width: 165px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 99%;
+  display: inline-block;
+  max-width: 180px;
+}
+.poll-item-answer {
+  color: #d2e8ff;
+  margin-top: -4px;
+  font-weight: 600;
+}
+
+@keyframes header {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    height: 60px;
+  }
+}
+.tabs {
+  display: flex;
+  height: 40px;
+  transition: all 0.4s ease;
+}
+.tabs.hidden {
+  transform: translateX(-100%);
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+.tab:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+.tab.active {
+  background: rgba(219, 10, 64, 0.15);
+}
+.tab.active svg path {
+  fill: #db0a40;
+}
+.tab.active:after {
+  opacity: 0;
+}
+.tab:after {
+  content: "";
+  background: rgba(0, 30, 60, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 999;
+}
+.tab svg {
+  position: relative;
+  top: 2px;
+}
+.tab svg path {
+  fill: #ffe8ee;
+}
+
+.separator {
+  width: 1px;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.separator:after {
+  content: "";
+  background: rgba(0, 30, 60, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 999;
+}
+
+/*# sourceMappingURL=/rbt-overlay-polling.e31bb0bc.css.map */
