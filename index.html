@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="_lodash.min.js"></script>
+        <script src="_medkit.umd.js"></script>
+        <script src="_countdown.js"></script>
+        <script src="_babel_polyfill.js"></script>
+
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <div class="extension popupVotePositionRight">
+            <div class='poll-container'>
+                <div class="box poll opened">
+                <div class="box-inner">
+                    <div class="poll-header">
+                        <div class="poll-counter-container">
+                            <div id="duration" class="poll-counter-value">duration</div>
+                            <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" fill="none" stroke-width="4"></circle>
+                            <circle class="progress__value" cx="60" cy="60" r="54" fill="none" stroke="red" stroke-width="7"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="poll-body">
+            
+                    <div id="poll-title" class="poll-title"></div>
+                    <div id="poll-answers" class="poll-answers list">
+                        <!-- Answers -->
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

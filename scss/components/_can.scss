@@ -1,0 +1,29 @@
+    .can {
+        height: 15px;
+        width: 5.56px;
+        background-image: url(https://uploads.codesandbox.io/uploads/user/2fca2322-f9cb-49e7-b3e3-ca1e6898abe8/Ftqg-canette.png);
+        background-size: cover;
+        transform: rotate(15deg);
+        position: relative;
+        display: block;
+        z-index: 2;
+
+        &-container {
+            position: relative;
+        }
+
+
+        &-shadow {
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            right: 0;
+            background-size: cover;
+            filter: blur(3px);
+            opacity: .5;
+
+        }
+
+    }

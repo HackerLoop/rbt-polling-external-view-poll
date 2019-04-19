@@ -1,0 +1,192 @@
+.main {
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  margin-right: auto;
+  margin-top: auto;
+  margin-left: $spacing * 2;
+  margin-top: $spacing * 2;
+  max-width: (270px + $spacing / 2);
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+
+.trigger {
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+  flex: 0 0 36px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient($red, $black);
+  background-color: $red;
+  margin-bottom: $spacing;
+  border: 2px solid white;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-right: $spacing / 2;
+  transition: .15s ease-in-out transform;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  svg {
+    position: relative;
+    z-index: 34;
+    path {
+      stroke: $lightred;
+    }
+  }
+  &:before {
+    position: absolute;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: #321b3d;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+  }
+  &.clicked {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border: 1px solid rgba($black, 0.5);
+  }
+  .can {
+    height: 27px;
+    width: 10px;
+    transform: rotate(36deg);
+
+    &-shadow {
+      filter: blur(4px);
+      transform: rotate(36deg) scale(1.1);
+    }
+  }
+}
+
+.box {
+  border-radius: $radius;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(0deg, $blue, $red);
+  user-select: none;
+  position: relative;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+  transform: translateY(-20px);
+  min-width: 230px;
+
+  &.opened {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.poll {
+    min-width: 300px;
+    width: content-width;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.main {
+    min-height: 345px;
+    width: 100%;
+    max-width: 230px;
+  }
+
+  &-inner {
+    background: rgba($blue, 0.77);
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+
+  &-header {
+    border-bottom: 1px solid rgba(black, 0.4);
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: $red;
+  }
+
+  &:before {
+    top: initial;
+    bottom: 0;
+    background: white;
+  }
+}

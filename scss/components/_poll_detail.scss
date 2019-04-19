@@ -1,0 +1,179 @@
+.poll-detail {
+  flex: 0 0 100%;
+  position: relative;
+  z-index: 99;
+  margin-top: -38px;
+
+  &.active {
+    box-shadow: 0px 0px 3px black;
+  }
+
+  &-header {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    height: 37px;
+    line-height: 38px;
+    font-size: 14px;
+
+    .back {
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      display: flex;
+      width: 32px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(0,0,0,.2);
+      }
+    }
+  }
+
+  &-question {
+    text-align: center;
+    color: white;
+    padding: ($spacing * 1.5) $spacing;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  &-tagline {
+    font-size: 12px;
+    color: $lightred;
+    font-weight: 600;
+    opacity: .8;
+
+    span {
+      display: inline-block;
+      margin: 0 $spacing / 3;
+      opacity: .5;
+    }
+  }
+}
+
+.poll-detail {
+  display: flex;
+  flex-flow: column;
+
+  &-results {
+    flex: 1;
+    padding: 0 $spacing;
+    padding-bottom: $spacing;
+
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.result-item {
+  display: flex;
+  position: relative;
+  padding: 2px 0;
+  flex: 0 0 29px;
+
+  .result-item-content {
+    .progress-bar {
+      position: absolute;
+      background: $lightred;
+      height: 100%;
+      opacity: .2;
+      border-radius: 2px;
+
+      &.winner {
+        background: $red;
+        opacity: 1;
+      }
+    }
+  }
+
+  .progress-bar {
+    position: absolute;
+    background: $lightred;
+    height: 100%;
+    opacity: .2;
+    border-radius: 2px;
+
+    &.winner {
+      background: $red;
+      opacity: 1;
+    }
+  }
+
+  &-avatar {
+    background-color: rgba(white, .1);
+    border-radius: 2px;
+    background-size: cover !important;
+    opacity: .5;
+    height: 25px;
+    width: 25px;
+
+
+    &-container {
+      margin-right: 4px;
+      flex: 0 0 25px;
+      position: relative;
+      img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+      }
+
+      .check {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 1px;
+        bottom: 0;
+      }
+    }
+
+    &.winner {
+      opacity: 1;
+    }
+  }
+
+  &-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-left: 4px;
+    }
+
+
+    &.winner {
+      .result-item-title {
+        color: white;
+      }
+    }
+  }
+
+  &-title {
+    font-weight: 900;
+    position: relative;
+    z-index: 9;
+    color: $lightred;
+    bottom: 1px;
+    padding-left: 4px;
+    font-size: 14px;
+  }
+
+  &-percent {
+    position: relative;
+    z-index: 9;
+    font-weight: 900;
+    font-size: 12px;
+    color: white;
+    margin-left: auto;
+  }
+}

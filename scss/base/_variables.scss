@@ -1,0 +1,17 @@
+// Variables go here
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700");
+
+$blue: #001e3c;
+$lightblue: #d2e8ff;
+
+$black: darken($blue, 5%);
+
+$red: #db0a40;
+$lightred: #ffe8ee;
+$radius: 4px;
+$base-font: "Titillium Web", sans-serif;
+$spacing: 12px;
+
+.hidden {
+  display: none;
+}

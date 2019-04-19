@@ -1,0 +1,72 @@
+.tabs {
+  display: flex;
+  height: 40px;
+  transition: all 0.4s ease;
+
+  &.hidden {
+    transform: translateX(-100%);
+  }
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    background: rgba(black, 0.15);
+  }
+
+  &.active {
+    background: rgba($red, 0.15);
+
+    svg {
+      path {
+        fill: $red;
+      }
+    }
+
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &:after {
+    content: "";
+    background: rgba($blue, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 999;
+  }
+
+  svg {
+    position: relative;
+    top: 2px;
+    path {
+      fill: $lightred;
+    }
+  }
+}
+
+.separator {
+  width: 1px;
+  background: rgba(black, 0.4);
+  position: relative;
+  &:after {
+    content: "";
+    background: rgba($blue, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 999;
+  }
+}
