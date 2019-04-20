@@ -212,26 +212,6 @@ const results = (poll, answers, result = []) => {
     }
 };
 
-const loopFetchResult = function(resp, key) {
-    getVoteData(key)
-      .then((result) => {
-        console.log('getVoteData result', key, result);
-        $('#poll-answers').empty();
-        $('#poll-answers #bloc_question').hide();                
-        results(resp, resp.answers, result)
-
-
-        setTimeout(function() {
-          //console.log('loopFetch timemoutSET');
-          if($('.box.poll').hasClass('opened')) {
-            loopFetchResult(resp, key);
-          }else {
-            //console.log('loopFetch timemoutCanceled', $('.box.poll'));
-          }
-        }, 3000);
-    });
-};
-
 /**
  * [setListen description]
  * @param {[type]} arr [description]
@@ -241,6 +221,7 @@ $(document).ready(function() {
   /**
    * Listening Muxy ...
    */
+  let interval;
   sdk.loaded().then(() => {
     console.log("Muxy loaded");
     let lastPoll;
@@ -249,6 +230,7 @@ $(document).ready(function() {
             console.log("LastPoll is ",lastPoll, "poll fetched is", data.key);
             if(lastPoll != data.key) {
                 lastPoll = data.key;
+                clearInterval(interval);
                 cleanPoll('.poll', counterStorage);
                 if (counterStorage) {
                     counterStorage.abort();
@@ -262,8 +244,14 @@ $(document).ready(function() {
                         $('#poll-answers').empty();
                         $('#poll-answers #bloc_question').hide();                
                         results(resp, resp.answers, result)
-                        loopFetchResult(resp, data.key);
                     })
+                    interval = setInterval(()=>{
+                        getVoteData(data.key).then((result) => {
+                            $('#poll-answers').empty();
+                            $('#poll-answers #bloc_question').hide();                
+                            results(resp, resp.answers, result)
+                        })
+                    }, 3000)
                 })
             }
         });
