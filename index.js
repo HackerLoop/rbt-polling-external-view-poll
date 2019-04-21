@@ -10,8 +10,9 @@ appStorage.setItem('counter', null);
 let counterStorage = null;
 
 const opts = new Muxy.DebuggingOptions();
-opts.role('viewer').environment('production')
+opts.role('admin').environment('production')
 .jwt('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIxNDA1NjYwMTIsInJvbGUiOiJhZG1pbiIsImNoYW5uZWxfaWQiOiIxMjQ0ODMyNTYiLCJ1c2VyX2lkIjoiMTI0NDgzMjU2Iiwib3BhcXVlX3VzZXJfaWQiOiJVMTI0NDgzMjU2IiwiaWF0IjoxNTQwNTY2MDcyfQ.9dlW4B2FGyXurFqwiMwEgjABJYPSWRT1h2LU9blhwmY');
+//.jwt('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTU4ODA1MzEsIm9wYXF1ZV91c2VyX2lkIjoiVTJOVVFjUjczdWlOTzBvU1EtWDF6IiwidXNlcl9pZCI6IjEzNjE5MjQxNyIsImNoYW5uZWxfaWQiOiIyNjM4MDc4ODIiLCJyb2xlIjoidmlld2VyIiwiaXNfdW5saW5rZWQiOmZhbHNlLCJwdWJzdWJfcGVybXMiOnsibGlzdGVuIjpbImJyb2FkY2FzdCIsIndoaXNwZXItVTJOVVFjUjczdWlOTzBvU1EtWDF6IiwiZ2xvYmFsIl19fQ.BO7etuhEp36e_qG5jFgn7Yo0Uz70PrzhxGew-JODw_U');
 
 
 Muxy.setup({extensionID: 'xyphukhqzv4tl044h0vxdrj945zbpr'});
@@ -228,6 +229,7 @@ $(document).ready(function() {
     setInterval(()=>{
         sdk.getJSONStore('global-global-lastPoll').then(data => {
             console.log("LastPoll is ",lastPoll, "poll fetched is", data.key);
+            //data.key = "global-vote_poll_v2HGkAX6vCWchtbSS"
             if(lastPoll != data.key) {
                 lastPoll = data.key;
                 clearInterval(interval);
